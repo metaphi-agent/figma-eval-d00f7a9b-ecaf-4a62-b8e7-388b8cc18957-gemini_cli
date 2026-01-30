@@ -1,0 +1,164 @@
+{
+  "general": {
+    "previewFeatures": true
+  },
+  "mcpServers": {
+    "gcs_uploader": {
+      "command": "python",
+      "args": ["/root/mcp_tools/gcs_uploader.py"],
+      "env": {
+        "DATABASE_URL": "$DATABASE_URL",
+        "ANTHROPIC_API_KEY": "$ANTHROPIC_API_KEY",
+        "OPENAI_API_KEY": "$OPENAI_API_KEY"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "artifact_registry": {
+      "command": "python",
+      "args": ["/root/mcp_tools/artifact_registry.py"],
+      "env": {
+        "DATABASE_URL": "$DATABASE_URL",
+        "ANTHROPIC_API_KEY": "$ANTHROPIC_API_KEY",
+        "OPENAI_API_KEY": "$OPENAI_API_KEY"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "thumbnail_generator": {
+      "command": "python",
+      "args": ["/root/mcp_tools/thumbnail_generator.py"],
+      "env": {
+        "DATABASE_URL": "$DATABASE_URL",
+        "ANTHROPIC_API_KEY": "$ANTHROPIC_API_KEY",
+        "OPENAI_API_KEY": "$OPENAI_API_KEY"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "app_preview": {
+      "command": "python",
+      "args": ["/root/mcp_tools/app_preview.py"],
+      "env": {
+        "DATABASE_URL": "$DATABASE_URL",
+        "ANTHROPIC_API_KEY": "$ANTHROPIC_API_KEY",
+        "OPENAI_API_KEY": "$OPENAI_API_KEY"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp", "--no-sandbox", "--isolated"],
+      "env": {},
+      "timeout": 600000,
+      "trust": true
+    },
+    "google_drive": {
+      "command": "python",
+      "args": ["/root/mcp_tools/google_drive.py"],
+      "env": {
+        "DATABASE_URL": "$DATABASE_URL",
+        "GOOGLE_OAUTH_CLIENT_ID": "$GOOGLE_OAUTH_CLIENT_ID",
+        "GOOGLE_OAUTH_CLIENT_SECRET": "$GOOGLE_OAUTH_CLIENT_SECRET"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "google_sheets": {
+      "command": "python",
+      "args": ["/root/mcp_tools/google_sheets.py"],
+      "env": {
+        "DATABASE_URL": "$DATABASE_URL",
+        "GOOGLE_OAUTH_CLIENT_ID": "$GOOGLE_OAUTH_CLIENT_ID",
+        "GOOGLE_OAUTH_CLIENT_SECRET": "$GOOGLE_OAUTH_CLIENT_SECRET"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "google_docs": {
+      "command": "python",
+      "args": ["/root/mcp_tools/google_docs.py"],
+      "env": {
+        "DATABASE_URL": "$DATABASE_URL",
+        "GOOGLE_OAUTH_CLIENT_ID": "$GOOGLE_OAUTH_CLIENT_ID",
+        "GOOGLE_OAUTH_CLIENT_SECRET": "$GOOGLE_OAUTH_CLIENT_SECRET"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "salesforce": {
+      "command": "python",
+      "args": ["/root/mcp_tools/salesforce.py"],
+      "env": {
+        "DATABASE_URL": "$DATABASE_URL",
+        "SALESFORCE_CLIENT_ID": "$SALESFORCE_CLIENT_ID",
+        "SALESFORCE_CLIENT_SECRET": "$SALESFORCE_CLIENT_SECRET"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "figma": {
+      "command": "python",
+      "args": ["/root/mcp_tools/figma.py"],
+      "env": {
+        "DATABASE_URL": "$DATABASE_URL",
+        "FIGMA_CLIENT_ID": "$FIGMA_CLIENT_ID",
+        "FIGMA_CLIENT_SECRET": "$FIGMA_CLIENT_SECRET"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "github": {
+      "command": "github-mcp-server",
+      "args": ["stdio", "--toolsets", "repos,issues,pull_requests,users"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "$GITHUB_PERSONAL_ACCESS_TOKEN"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "google_stt": {
+      "command": "python",
+      "args": ["/root/mcp_tools/google_stt.py"],
+      "env": {
+        "GOOGLE_CLOUD_PROJECT": "$GOOGLE_CLOUD_PROJECT",
+        "GOOGLE_APPLICATION_CREDENTIALS": "$GOOGLE_APPLICATION_CREDENTIALS"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "translate_text": {
+      "command": "python",
+      "args": ["/root/mcp_tools/translate_text.py"],
+      "env": {
+        "GCP_PROJECT_ID": "$GCP_PROJECT_ID",
+        "GCP_REGION": "$GCP_REGION",
+        "GOOGLE_APPLICATION_CREDENTIALS": "$GOOGLE_APPLICATION_CREDENTIALS"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "audio_processing": {
+      "command": "python",
+      "args": ["/root/mcp_tools/audio_processing.py"],
+      "env": {
+        "GCP_PROJECT_ID": "$GCP_PROJECT_ID",
+        "GCS_BUCKET": "$GCS_BUCKET",
+        "GOOGLE_APPLICATION_CREDENTIALS": "$GOOGLE_APPLICATION_CREDENTIALS"
+      },
+      "timeout": 600000,
+      "trust": true
+    },
+    "gemini_nanobanana": {
+      "command": "python",
+      "args": ["/root/mcp_tools/gemini_nanobanana.py"],
+      "env": {
+        "GCP_PROJECT_ID": "$GCP_PROJECT_ID",
+        "GOOGLE_APPLICATION_CREDENTIALS": "$GOOGLE_APPLICATION_CREDENTIALS"
+      },
+      "timeout": 600000,
+      "trust": true
+    }
+  }
+}
